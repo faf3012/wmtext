@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<div>
+<form action="/groups/save" method="POST">
+	<label for="groupname"><input type="text" name="groupname" value="{{groups.groupname}}" {{#if editmode}}disabled="disabled"{{/if}}/>Group name</label>
+	<label for="description"><textarea name="description">{{groups.description}}</textarea>Description</label>
+	<input type="hidden" name="groupId" value="{{groups._id}}" />
+	<a href="/groups/"><input type="button" value="Cancel" /></a>
+	<input type="submit" value="{{buttonLabel}}" />
+</form>
+</div>

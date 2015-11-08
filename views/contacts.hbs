@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<a href="/">Home</a>
+<a href="/contacts/add">Add new contact</a>
+<table id="thing">
+<tr><th>Username</th><th>First name</th><th>Work Mobile</th><th>Personal Mobile</th><th>Active</th><th>Message</th><th>Edit</th><th>Delete</th></tr>
+{{#each contacts}}
+	<tr data-id="{{_id}}"><td>{{username}}</td><td>{{firstname}}</td><td>{{workmobile}}</td><td>{{personalmobile}}</td><td>{{active}}</td><td><a href="/messages/send/{{_id}}">Send</a></td><td><a href="/contacts/edit/{{_id}}">Edit</a></td><td><div class="ng-delete" ng-click="toggleModal('delete', '{{../itemType}}', '{{username}}', '{{_id}}')">Delete</div></td></tr>
+{{/each}}
+</table>

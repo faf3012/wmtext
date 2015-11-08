@@ -1,0 +1,33 @@
+
+@import 'modal';
+
+body {
+  padding: 5px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #0000ff;
+}
+
+a {
+  color: #00B7FF;
+}
+
+label {
+	display: block;
+	margin: 0.5em;
+	input, textarea {
+		margin-right: 10px;
+    width: 15em;
+	}
+}
+
+.something {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.somethingelse {
+  @extend .something;
+  border-color: green;
+}
+

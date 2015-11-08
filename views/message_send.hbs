@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<div>
+<form action="/messages/send" method="POST">
+	<label for="username"><input type="text" name="username" value="{{contact.username}}" disabled="disabled"/></label>
+	<label for="mobilenumber"><input type="text" name="mobilenumber" value="{{#if contact.workmobile}}{{contact.workmobile}}{{else}}{{contact.personalmobile}}{{/if}}" disabled="disabled"/></label>
+	<label for="message"><textarea name="message" rows="6"/></textarea></label>
+
+	<input type="hidden" name="contactId" value="{{contact._id}}" />
+	<a href="/contacts/"><input type="button" value="Cancel" /></a>
+	<input type="submit" value="{{buttonLabel}}" />
+</form>
+</div>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webmart SMS</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="/javascripts/app.angular.js"></script>
+    <script src="/javascripts/hbs_helpers.js"></script>
+  </head>
+  <body ng-app='MainApp'>
+    <div ng-controller='ModalCtrl'>
+	    {{{body}}}
+  		<modaldialog show='modalShown'>
+  		  <p class="ng-modal-message" ng-bind="message"></p>
+        <div class="ng-modal-buttons">
+          <a class="ng-modal-reject" ng-click="modalReject()" ng-bind="reject"></a>
+          <a class="ng-modal-confirm" ng-click="modalConfirm()" ng-bind="confirm"></a>
+        </div>
+  		</modaldialog>
+    </div>
+  </body>
+</html>

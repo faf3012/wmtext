@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<div>
+<form action="/contacts/save" method="POST">
+	<label for="username"><input type="text" name="username" value="{{contacts.username}}" {{#if editmode}}disabled="disabled"{{/if}}/>Username (barney.rubble)</label>
+	<label for="firstname"><input type="text" name="firstname" value="{{contacts.firstname}}" />First name</label>
+	<label for="workmobile"><input type="text" name="workmobile" value="{{contacts.workmobile}}" />Work mobile</label>
+	<label for="personalmobile"><input type="text" name="personalmobile" value="{{contacts.personalmobile}}" />Personal mobile</label>
+	<input type="hidden" name="docId" value="{{contacts._id}}" />
+	<a href="/contacts/"><input type="button" value="Cancel" /></a>
+	<input type="submit" value="{{buttonLabel}}" />
+</form>
+</div>

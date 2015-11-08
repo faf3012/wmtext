@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<a href="/">Home</a>
+<a href="/groups/add">Add new group</a>
+<table id="thing">
+<tr><th>Group name</th><th>Description</th><th>Message</th><th>Contacts</th><th>Edit</th><th>Delete</th></tr>
+{{#each groups}}
+	<tr data-id="{{_id}}"><td>{{groupname}}</td><td>{{description}}</td><td><a href="/messages/send/group/{{_id}}">Send</a></td><td>({{membercount}}) <a href="/groups/contacts/{{_id}}">Change</a></td><td><a href="/groups/edit/{{_id}}">Edit</a></td><td><div class="ng-delete" ng-click="toggleModal('delete', '{{../itemType}}', '{{groupname}}', '{{_id}}')">Delete</div></td></tr>
+{{/each}}
+</table>

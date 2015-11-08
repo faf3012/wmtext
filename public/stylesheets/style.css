@@ -1,0 +1,98 @@
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.4; }
+
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index: 10000;
+  position: absolute;
+  width: 350px;
+  /* Default */
+  /* Center the dialog */
+  top: 25%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+  -webkit-transform: translate(-25%, -50%);
+  -moz-transform: translate(-25%, -50%);
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000; }
+
+.ng-modal-dialog-content {
+  padding: 10px;
+  text-align: left; }
+
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif'; }
+
+.ng-delete {
+  text-decoration: underline;
+  cursor: pointer; }
+
+.ng-modal-message {
+  text-align: center;
+  font-size: 1.3em;
+  margin: 2em 0.75em 0.75em; }
+
+div.ng-modal-buttons {
+  width: 100%;
+  text-align: center; }
+  div.ng-modal-buttons .ng-modal-confirm {
+    display: inline-block;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 0.4em;
+    text-align: center;
+    margin: 0.5em 0.75em;
+    cursor: pointer; }
+  div.ng-modal-buttons .ng-modal-reject {
+    display: inline-block;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 0.4em;
+    text-align: center;
+    margin: 0.5em 0.75em;
+    cursor: pointer; }
+  div.ng-modal-buttons .ng-modal-confirm:hover {
+    border: 1px solid red; }
+  div.ng-modal-buttons .ng-modal-reject:hover {
+    border: 1px solid red; }
+
+body {
+  padding: 5px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #0000ff; }
+
+a {
+  color: #00B7FF; }
+
+label {
+  display: block;
+  margin: 0.5em; }
+  label input, label textarea {
+    margin-right: 10px;
+    width: 15em; }
+
+.something, .somethingelse {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.somethingelse {
+  border-color: green; }
+
+/*# sourceMappingURL=style.css.map */

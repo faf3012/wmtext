@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+<a href="/">Home</a>
+<a href="/groups/">Groups</a>
+<p>Change contacts in group - {{group.groupname}}</p>
+<div ng-controller='SelectCtrl' ng-init="init('{{group._id}}')">
+	<table>
+	<tr>
+		<td>
+			<select size="10" multiple ng-model="available" ng-options="contact._id as contact.username for contact in availablecontacts" style="width: 200px"></select>
+		</td>
+		<td>
+			<input id="moveright" type="button" value="Add to Group" ng-click="moveItem(available, availablecontacts,selectedcontacts)" /><br />
+		    <input id="moverightall" type="button" value="Add All to Group" ng-click="moveAll(availablecontacts,selectedcontacts)" /><br />
+		    <input id="move left" type="button" value="Remove From Group" ng-click="moveItem(selected, selectedcontacts,availablecontacts)" /><br />
+		    <input id="moveleftall" type="button" value="Remove All From Group" ng-click="moveAll(selectedcontacts,availablecontacts)" />
+		</td>
+		<td>
+			<select size="10" multiple ng-model="selected" ng-options="contact._id as contact.username for contact in selectedcontacts" style="width: 200px"></select>
+		</td>
+	</tr>
+
+	</table>
+	<input id="savechanges" type="button" value="Save Group Changes" ng-click="saveChanges()" />
+</div>

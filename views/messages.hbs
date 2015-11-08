@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<a href="/">Home</a>
+<table id="thing">
+<tr><th>Message</th><th>ID</th><th>Date</th><th>Recipient</th></tr>
+{{#each messages}}
+	<tr data-id="{{_id}}"><td>{{truncate message 25}}</td><td>{{_id}}</td><td>{{formatDate dateSent}}</td><td>Unknown</td></tr>
+{{/each}}
+</table>
