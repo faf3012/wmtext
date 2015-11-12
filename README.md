@@ -9,4 +9,4 @@ git commit -m 'Added my project'
 git remote add origin https://github.com/faf3012/wmtext.git
 git push -u -f origin master
 
-adding a new line to test the doo dar
+adding a new line to test the doo dar!
